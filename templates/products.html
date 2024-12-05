@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница продуктов
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1>Товары</h1>
+    {% for unit in units_title_price %}
+    <div class="alert alert-info">
+        <p><h5>{{ unit.title }}</h5></p>
+        <p><b>{{ unit.price }}</b></p>
+    </div>
+    {% endfor %}
+
+</div>
+{% endblock %}
